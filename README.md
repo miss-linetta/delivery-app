@@ -1,27 +1,58 @@
-Getting Started
+## Getting Started
 
-Clone the repository:
+To get started with the app, follow these steps:
 
-`git clone https://github.com/miss-linetta/delivery-app.git`
+1. Clone the repository:
 
-Navigate to the project directory:
-`cd ./server`
+   ```shell
+   git clone https://github.com/miss-linetta/delivery-app.git
+   ```
 
-Install the dependencies:
-`npm install`
+2. Navigate to the server directory:
 
-Start the development server:
-`npm run dev`
+   ```shell
+   cd ./server
+   ```
 
-Then navigate to the client directory from root directory
-`cd ./client`
+3. Install the dependencies:
 
-Install the dependencies:
-`npm install`
+   ```shell
+   npm install
+   ```
 
-Create environment file and add PORT and CONECTION_URL variables
+4. Create an environment file and add the required variables. For example, create a `.env` file in the server directory and add the following:
 
-Start the development server:
-`npm run dev`
+   ```plaintext
+   PORT=3000
+   CONECTION_URL=<your-connection-url>
+   ```
 
-Open your browser and visit http://localhost:3001 to see the app running.
+   Replace `<your-connection-url>` with the actual connection URL for your database.
+
+5. Start the server:
+
+   ```shell
+   npm run dev
+   ```
+
+6. Open another terminal window and navigate to the client directory from the root directory:
+
+   ```shell
+   cd ./client
+   ```
+
+7. Install the dependencies:
+
+   ```shell
+   npm install
+   ```
+
+8. Start the client development server:
+
+   ```shell
+   npm run dev
+   ```
+
+9. Open your browser and visit [http://localhost:3001](http://localhost:3001) to see the app running.
+
+Make sure you have Node.js and npm installed on your machine before starting the development servers.
