@@ -2,24 +2,26 @@ Getting Started
 
 Clone the repository:
 
-git clone https://github.com/miss-linetta/delivery-app.git
+`git clone https://github.com/miss-linetta/delivery-app.git`
 
 Navigate to the project directory:
-cd ./server
+`cd ./server`
 
 Install the dependencies:
-npm install
+`npm install`
 
 Start the development server:
-npm run dev
+`npm run dev`
 
 Then navigate to the client directory from root directory
-cd ./client
+`cd ./client`
 
 Install the dependencies:
-npm install
+`npm install`
+
+Create environment file and add PORT and CONECTION_URL variables
 
 Start the development server:
-npm run dev
+`npm run dev`
 
 Open your browser and visit http://localhost:3001 to see the app running.
