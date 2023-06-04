@@ -1,0 +1,1 @@
+{"version":3,"file":"shops.js","sourceRoot":"","sources":["../../models/shops.ts"],"names":[],"mappings":";;;;;AAAA,wDAAgC;AAEhC,MAAM,UAAU,GAAG,IAAI,kBAAQ,CAAC,MAAM,CAAC;IACnC,KAAK,EAAE,MAAM;IACb,KAAK,EAAE,CAAC,MAAM,CAAC;CAClB,CAAC,CAAC;AAEH,MAAM,IAAI,GAAG,kBAAQ,CAAC,KAAK,CAAC,MAAM,EAAE,UAAU,CAAC,CAAC;AAEhD,kBAAe,IAAI,CAAC"}

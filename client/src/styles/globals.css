@@ -1,0 +1,6 @@
+body, html {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #F5F0F6;
+  height: 100%;
+}
