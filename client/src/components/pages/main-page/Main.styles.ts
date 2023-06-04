@@ -18,13 +18,12 @@ export const foodList: SxProps<Theme> = {
 }
 
 export const shopsList: SxProps<Theme> = {
-    // maxWidth: '300px',
     width: '100%',
     height: 'fit-content',
     border: `0.5px solid ${palette.primary}`,
     borderRadius: '10px',
     padding: '20px 60px',
-    button: {
+    'div > div > button': {
         borderRadius: '10px',
         borderTopRightRadius: '10px',
         borderBottomRightRadius: '10px',

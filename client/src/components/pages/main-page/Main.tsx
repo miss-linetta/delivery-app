@@ -1,7 +1,6 @@
 import { SetStateAction, useState } from 'react';
 import { useQuery } from 'react-query';
 import FoodCard from './components/FoodCard';
-import ShopList from './components/ShopItem';
 import { Grid, Paper, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import { FoodAPI } from '@/lib/api/food/FoodAPI';
 import * as styles from './Main.styles';
