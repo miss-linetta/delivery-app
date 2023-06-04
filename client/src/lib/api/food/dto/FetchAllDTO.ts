@@ -3,5 +3,5 @@ export interface FetchAllDTO {
     image: String,
     shop: String,
     price: Number,
-    map: any
+    filter: any
 }

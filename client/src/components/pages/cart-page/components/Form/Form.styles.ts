@@ -3,6 +3,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 
 export const container: SxProps<Theme> = {
     width: '70%',
+    height: 'fit-content',
     minWidth: '250px',
     maxWidth: '500px',
     padding: '30px',

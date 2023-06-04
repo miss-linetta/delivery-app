@@ -6,9 +6,10 @@ import { useQuery } from 'react-query';
 import { OrderAPI } from '@/lib/api/order/OrderAPI';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { generateOrderID } from '@/components/pages/main-page/utils/getOrderId';
+import { generateOrderID } from '@/components/utils/getOrderId';
+import { getTotal } from '@/components/utils/getTotal';
 
-interface Item {
+export interface Item {
   id: string;
   img: string;
   title: string;
@@ -30,21 +31,11 @@ const Form: React.FC<FormProps> = ({ cartItems }) => {
     items: [] as string[],
   });
 
-  const getTotal = (cartItems: Array<Item>) => {
-    const total = cartItems.reduce(
-      (accumulator: number, currentValue: Item) =>
-        accumulator + currentValue.price,
-      0
-    );
-
-    return total;
-  };
-
   const totalPrice = getTotal(cartItems);
 
   let itemsIdList: string[] = [];
 
-  const getitemsIdList = (cartItems: Array<Item>) => {
+  const getItemsIdList = (cartItems: Array<Item>) => {
     cartItems.forEach((item) => {
       itemsIdList.push(item.id);
     });
@@ -59,7 +50,7 @@ const Form: React.FC<FormProps> = ({ cartItems }) => {
   //   }
   // };
 
-  getitemsIdList(cartItems);
+  getItemsIdList(cartItems);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();

@@ -3,6 +3,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 
 export const container: SxProps<Theme> = {
     width: '250px',
+    height: 'fit-content',
     textAlign: 'center',
     borderRadius: '10px',
     border: `0.5px solid ${palette.primary}`,
