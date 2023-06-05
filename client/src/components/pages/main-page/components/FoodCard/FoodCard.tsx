@@ -11,6 +11,7 @@ import * as styles from './FoodCard.styles';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import RemoveShoppingCartOutlinedIcon from '@mui/icons-material/RemoveShoppingCartOutlined';
 import { addToCart, removeFromCart } from '@/redux/reducers/cart.reducer';
+import { useMemo } from 'react';
 
 export interface FoodCardProps {
   id: string;
@@ -22,8 +23,9 @@ export interface FoodCardProps {
 const FoodCard: React.FC<FoodCardProps> = ({ id, title, img, price }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: any) => state.cart.items);
-  const isInCart = cartItems.some((item: any) => item.id === id);
-  const cartPage = false;
+  const isInCart = useMemo(() => {
+    return cartItems.some((item: any) => item.id === id);
+  }, [cartItems, id]);
 
   const handleCartUpdate = () => {
     if (isInCart) {
@@ -50,35 +52,32 @@ const FoodCard: React.FC<FoodCardProps> = ({ id, title, img, price }) => {
           ${price}
         </Typography>
       </CardContent>
-      {!cartPage ? (
-        <CardActions sx={styles.action}>
-          {isInCart ? (
-            <Button
-              variant="outlined"
-              size="small"
-              color="error"
-              type="button"
-              endIcon={<RemoveShoppingCartOutlinedIcon />}
-              onClick={handleCartUpdate}
-            >
-              Delete from cart
-            </Button>
-          ) : (
-            <Button
-              variant="outlined"
-              size="small"
-              color="success"
-              type="button"
-              endIcon={<AddShoppingCartOutlinedIcon />}
-              onClick={handleCartUpdate}
-            >
-              Add to cart
-            </Button>
-          )}
-        </CardActions>
-      ) : (
-        ''
-      )}
+
+      <CardActions sx={styles.action}>
+        {isInCart ? (
+          <Button
+            variant="outlined"
+            size="small"
+            color="error"
+            type="button"
+            endIcon={<RemoveShoppingCartOutlinedIcon />}
+            onClick={handleCartUpdate}
+          >
+            Delete from cart
+          </Button>
+        ) : (
+          <Button
+            variant="outlined"
+            size="small"
+            color="success"
+            type="button"
+            endIcon={<AddShoppingCartOutlinedIcon />}
+            onClick={handleCartUpdate}
+          >
+            Add to cart
+          </Button>
+        )}
+      </CardActions>
     </Card>
   );
 };

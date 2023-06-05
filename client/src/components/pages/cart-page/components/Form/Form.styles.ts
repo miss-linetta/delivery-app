@@ -21,3 +21,8 @@ export const container: SxProps<Theme> = {
         }
     }
 }
+
+export const total: SxProps<Theme> = {
+    display: 'flex',
+    justifyContent: 'space-between'
+}

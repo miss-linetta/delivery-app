@@ -31,6 +31,16 @@ const Form: React.FC<FormProps> = ({ cartItems }) => {
     items: [] as string[],
   });
 
+  const getTotal = (cartItems: Array<Item>) => {
+    const total = cartItems.reduce(
+      (accumulator: number, currentValue: Item) =>
+        accumulator + currentValue.price,
+      0
+    );
+
+    return total;
+  };
+
   const totalPrice = getTotal(cartItems);
 
   let itemsIdList: string[] = [];
@@ -99,9 +109,9 @@ const Form: React.FC<FormProps> = ({ cartItems }) => {
             setPostData({ ...postData, address: e.target.value })
           }
         />
-        <Box>
-          <Typography>Total</Typography>
-          <Typography>${totalPrice}</Typography>
+        <Box sx={styles.total}>
+          <Typography variant="body2">Total:</Typography>
+          <Typography variant="body2">${totalPrice}</Typography>
         </Box>
         <Button type="submit" color="inherit" variant="contained" fullWidth>
           Submit

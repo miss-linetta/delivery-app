@@ -17,21 +17,19 @@ export const foodList: SxProps<Theme> = {
     gap: '20px'
 }
 
+export const button: SxProps<Theme> = {
+    borderRadius: '10px',
+    borderTopRightRadius: '10px',
+    borderBottomRightRadius: '10px',
+}
+
 export const shopsList: SxProps<Theme> = {
     width: '100%',
     height: 'fit-content',
     border: `0.5px solid ${palette.primary}`,
     borderRadius: '10px',
     padding: '20px 60px',
-    'div > div > button': {
-        borderRadius: '10px',
-        borderTopRightRadius: '10px',
-        borderBottomRightRadius: '10px',
-    },
-    div: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '15px',
-        
-    }
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '15px',
 }

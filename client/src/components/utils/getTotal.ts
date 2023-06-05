@@ -1,3 +1,4 @@
+
 import { Item } from "../pages/cart-page/components/Form/Form";
 
 export const getTotal = (cartItems: Array<Item>) => {
